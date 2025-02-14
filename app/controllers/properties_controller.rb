@@ -1,4 +1,6 @@
 class PropertiesController < ApplicationController
+  include PropertyFormatter
+
   def index
     # Validate required parameters
     required_params = [ "lat", "lng", "property_type", "marketing_type" ]
@@ -38,20 +40,7 @@ class PropertiesController < ApplicationController
       return render json: { error: "No properties found for the given location and filters" }, status: :not_found
     end
 
-    results = properties.map do |prop|
-      {
-        house_number: prop.house_number,
-        street:       prop.street,
-        city:         prop.city,
-        zip_code:     prop.zip_code,
-        state:        prop.city,
-        lat:          prop.lat.to_s,
-        lng:          prop.lng.to_s,
-        price:        prop.price.to_s
-      }
-    end
-
-    render json: results, status: :ok
+    render json: format_properties(properties), status: :ok
   end
 
   # Rescue from unforeseen errors and return JSON response
