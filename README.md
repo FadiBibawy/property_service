@@ -126,3 +126,5 @@ Example Request
 ```bash
 curl "http://localhost:3000/properties?lat=52.5342963&lng=13.4236807&property_type=apartment&marketing_type=sell"
 ```
+
+https://github.com/user-attachments/assets/7b03a3df-b0fd-407c-83cf-dbcb6b90a5be
