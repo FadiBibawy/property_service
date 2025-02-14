@@ -19,7 +19,7 @@ The Property Service API is a RESTful web service designed to help real estate a
 - Ruby (3.4.1)
 - Rails (8.0.1)
 - PostgreSQL (17.2)
-- Bundler
+- Bundler (2.6.2)
 
 ### 1. Clone the Repository
 
