@@ -1,7 +1,7 @@
 class PropertiesController < ApplicationController
   def index
     # Validate required parameters
-    required_params = %w[lat lng property_type marketing_type]
+    required_params = [ "lat", "lng", "property_type", "marketing_type" ]
     missing = required_params.select { |p| params[p].blank? }
     if missing.any?
       return render json: { error: "Missing required parameters: #{missing.join(', ')}" }, status: :bad_request
