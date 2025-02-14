@@ -10,8 +10,6 @@ class Property < ApplicationRecord
       ORDER BY distance ASC
     SQL
 
-    binding.irb
-
     find_by_sql([ query, lat, lng, property_type, marketing_type, lat, lng, radius ])
   end
 end

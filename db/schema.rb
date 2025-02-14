@@ -10,8 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_13_223250) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_14_191909) do
   # These are extensions that must be enabled in order to support this database
+  enable_extension "cube"
+  enable_extension "earthdistance"
   enable_extension "pg_catalog.plpgsql"
 
   create_table "properties", force: :cascade do |t|
@@ -27,7 +29,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_13_223250) do
     t.decimal "number_of_rooms"
     t.decimal "price"
     t.string "currency"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 end
