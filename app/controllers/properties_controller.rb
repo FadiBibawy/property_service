@@ -16,8 +16,8 @@ class PropertiesController < ApplicationController
     end
 
     # Validate Allowed values for property_type & marketing_type
-    allowed_property_types = ["apartment", "single_family_house"]
-    allowed_marketing_types = ["rent", "sell"]
+    allowed_property_types = [ "apartment", "single_family_house" ]
+    allowed_marketing_types = [ "rent", "sell" ]
 
     property_type = params[:property_type]
     marketing_type = params[:marketing_type]
